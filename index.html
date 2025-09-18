@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valencia Move: A Family's Transition Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .tab-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .tab-button:hover::before {
+            left: 100%;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8, #3b82f6);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-slide-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .animate-pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+    
+    <!-- Floating Background Elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="floating-element absolute top-10 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full blur-xl"></div>
+        <div class="floating-element absolute top-1/3 right-20 w-32 h-32 bg-blue-400 bg-opacity-20 rounded-full blur-2xl" style="animation-delay: -2s;"></div>
+        <div class="floating-element absolute bottom-20 left-1/4 w-16 h-16 bg-purple-400 bg-opacity-15 rounded-full blur-lg" style="animation-delay: -4s;"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Header Section -->
+        <div class="text-center mb-12 animate-fade-in">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-white bg-opacity-20 rounded-full mb-6 animate-pulse-glow">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 text-shadow">
+                Valencia Journey
+            </h1>
+            <p class="text-xl md:text-2xl text-white text-opacity-90 max-w-3xl mx-auto leading-relaxed">
+                Your comprehensive roadmap to a seamless family transition to Spain
+            </p>
+            <div class="progress-bar w-32 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <!-- Main Container -->
+        <div class="glass-effect rounded-3xl shadow-2xl overflow-hidden animate-slide-up">
+            
+            <!-- Navigation Tabs -->
+            <div class="flex flex-wrap justify-center bg-white bg-opacity-10 p-2 gap-2">
+                <button class="tab-button active flex-1 min-w-0 py-4 px-6 text-sm font-semibold text-center text-white rounded-xl transition-all duration-300" onclick="openTab(event, 'Welcome')">
+                    <span class="hidden sm:inline">🏠 </span>Welcome
+                </button>
+                <button class="tab-button flex-1 min-w-0 py-4 px-6 text-sm font-semibold text-center text-white rounded-xl transition-all duration-300" onclick="openTab(event, 'Timeline')">
+                    <span class="hidden sm:inline">📅 </span>Timeline
+                </button>
+                <button class="tab-button flex-1 min-w-0 py-4 px-6 text-sm font-semibold text-center text-white rounded-xl transition-all duration-300" onclick="openTab(event, 'DNV')">
+                    <span class="hidden sm:inline">📋 </span>Documents
+                </button>
+                <button class="tab-button flex-1 min-w-0 py-4 px-6 text-sm font-semibold text-center text-white rounded-xl transition-all duration-300" onclick="openTab(event, 'Budget')">
+                    <span class="hidden sm:inline">💰 </span>Budget
+                </button>
+                <button class="tab-button flex-1 min-w-0 py-4 px-6 text-sm font-semibold text-center text-white rounded-xl transition-all duration-300" onclick="openTab(event, 'Schools')">
+                    <span class="hidden sm:inline">🏫 </span>Schools
+                </button>
+                 <button class="tab-button flex-1 min-w-0 py-4 px-6 text-sm font-semibold text-center text-white rounded-xl transition-all duration-300" onclick="openTab(event, 'OaklandProperty')">
+                    <span class="hidden sm:inline">🏡 </span>Oakland
+                </button>
+                <button class="tab-button flex-1 min-w-0 py-4 px-6 text-sm font-semibold text-center text-white rounded-xl transition-all duration-300" onclick="openTab(event, 'Logistics')">
+                    <span class="hidden sm:inline">🎯 </span>Logistics
+                </button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-8 md:p-12 bg-white min-h-screen">
+                
+                <!-- Welcome Tab -->
+                <div id="Welcome" class="tab-content active">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold gradient-text mb-4">Welcome to Your Journey</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Your personalized command center for the most important move of your life</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl border border-blue-200">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800">Our Purpose</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                This is your all-in-one mission control for relocating to Valencia. Every detail, from visa paperwork to finding the perfect neighborhood, is organized and ready when you need it.
+                            </p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl border border-purple-200">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800">How It Works</h3>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                Navigate effortlessly through each phase of your move using our intuitive tabs. This living document evolves with your journey, updating as your plans develop.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-green-50 to-emerald-100 p-8 rounded-2xl border border-green-200 card-hover">
+                        <div class="text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9l-9-9-9 9"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Ready to Begin?</h3>
+                            <p class="text-gray-700 text-lg mb-4">
+                                Your Spanish adventure starts with a single click. Each tab contains everything you need for that phase of your journey.
+                            </p>
+                            <button onclick="openTab(event, 'Timeline')" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                Start Your Timeline →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Tab -->
+                <div id="Timeline" class="tab-content">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold gradient-text mb-4">Your Moving Timeline</h2>
+                        <p class="text-xl text-gray-600">August 2025 - July 2026: Your month-by-month roadmap</p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="card-hover bg-gradient-to-r from-red-50 to-orange-100 p-6 rounded-xl border-l-4 border-red-500 relative overflow-hidden">
+                            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Aug 2025</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Foundation Phase</h3>
+                            <p class="text-gray-700">Prepare your Lake Worth home for sale and begin visa document collection. Start with marriage and birth certificate notarization and apostilling.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-r from-orange-50 to-yellow-100 p-6 rounded-xl border-l-4 border-orange-500 relative">
+                            <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Sep 2025</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Documentation Sprint</h3>
+                            <p class="text-gray-700">Organize digital and physical document folders. Submit apostille requests to Florida Department of State. Research 3-4 potential schools in Valencia.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-r from-yellow-50 to-green-100 p-6 rounded-xl border-l-4 border-yellow-500 relative">
+                            <div class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Oct 2025</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Financial Planning</h3>
+                            <p class="text-gray-700">Finalize Spanish living budget. Research private health insurance (Sanitas, Adeslas, DKV). Gather VA income letters and 12-month investment statements.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-r from-green-50 to-blue-100 p-6 rounded-xl border-l-4 border-green-500 relative">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Nov 2025</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Translation & Background</h3>
+                            <p class="text-gray-700">Begin certified Spanish translations of key documents. Order FBI Background Check. Prepare medical certificate requirements.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-r from-blue-50 to-indigo-100 p-6 rounded-xl border-l-4 border-blue-500 relative">
+                            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Dec 2025</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Appointment Booking</h3>
+                            <p class="text-gray-700">Draft cover letter and document index. Book Miami consulate appointment via BLS portal. Research short-term furnished rentals in Valencia.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-r from-indigo-50 to-purple-100 p-6 rounded-xl border-l-4 border-indigo-500 relative">
+                            <div class="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Jan 2026</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Consulate Submission</h3>
+                            <p class="text-gray-700">Complete medical certificate appointment. Attend Miami consulate to submit your DNV application. The big milestone!</p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-r from-purple-50 to-pink-100 p-6 rounded-xl border-l-4 border-purple-500 relative">
+                            <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Apr-Jun 2026</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Final Preparations</h3>
+                            <p class="text-gray-700">Secure temporary Valencia housing for padrón registration. Book one-way flights MIA to VLC/MAD. Finalize school enrollment paperwork.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-r from-pink-50 to-red-100 p-6 rounded-xl border-l-4 border-pink-500 relative">
+                            <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Jul 2026</div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">¡Bienvenidos a Valencia!</h3>
+                            <p class="text-gray-700">Your Spanish adventure begins! Arrive in Valencia with all key documents in hand luggage. Time to start your new chapter.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DNV Tab -->
+                <div id="DNV" class="tab-content">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold gradient-text mb-4">Digital Nomad Visa Guide</h2>
+                        <p class="text-xl text-gray-600">Everything you need for your DNV application</p>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <!-- Step 1: General Documentation -->
+                        <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl border border-blue-200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                                <span class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl mr-4">1</span>
+                                General Documentation
+                            </h3>
+                            <div class="bg-white p-6 rounded-xl">
+                                <div class="mb-4">
+                                    <h4 class="font-semibold text-gray-800 mb-2">Application Forms</h4>
+                                    <ul class="space-y-1 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                            <a href="https://www.exteriores.gob.es/Consulados/washington/en/ServiciosConsulares/Documents/Visado/NationalVisaApplicationForm.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline">**National Visa Application Form**</a>: Completed and signed by the main applicant.
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                            <a href="https://entretramites.com/en/downloadables/immigration-forms/form-ex01" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline">**Form EX-01**</a>: Completed and signed.
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                            **Passport**: Original with validity of 1 year left. You'll need scanned copies of each page.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Translations & Apostilles</h4>
+                                    <ul class="space-y-1 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                            **Criminal Background Check**: Must be translated by a sworn translator and have a <a href="https://www.usa.gov/authenticate-us-document" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline">Hague Apostille</a>.
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                            **Birth Certificate**: Required for all family members, must be translated by a sworn translator and have a Hague Apostille.
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                            **Marriage Certificate**: Required for spouses, must be translated by a sworn translator and have a Hague Apostille.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Financial Requirements -->
+                        <div class="card-hover bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl border border-green-200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                                <span class="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center text-xl mr-4">2</span>
+                                Financial Documentation
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                You must prove sufficient and stable income to support your family. Your projected monthly income of **$8,188.00** comfortably exceeds the DNV minimum.
+                            </p>
+                            <div class="bg-white p-6 rounded-xl">
+                                <h4 class="font-semibold text-gray-800 mb-3">Required Documents:</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Bank statements from the last 12 months.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        VA disability income letters to prove consistent income.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Proof of investment income, if applicable.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        **Proof of Administrative Fee 790 038:** Proof of payment is required for the initial permit.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Other Key Documents -->
+                        <div class="card-hover bg-gradient-to-br from-yellow-50 to-orange-100 p-8 rounded-2xl border border-yellow-200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                                <span class="w-10 h-10 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xl mr-4">3</span>
+                                Other Key Documents
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                In addition to the above, you will need a few more documents to complete your application.
+                            </p>
+                            <div class="bg-white p-6 rounded-xl">
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        **Medical Certificate:** Required for all applicants to state that you do not have any diseases that may cause serious repercussions for public health. Must be translated by a sworn translator.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        **Proof of Health Insurance:** Certificate of public or private health insurance valid in Spain.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        **Letter of Intent:** A letter explaining your purpose for the move.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        **Letter of Employment:** A letter from Emily's company stating she is a remote worker.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: The Application Process -->
+                        <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl border border-purple-200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                                <span class="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center text-xl mr-4">4</span>
+                                The Application Process
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                You will need to submit your application in person at the Consulate, but it's important to remember that the final approval is handled by Spanish authorities.
+                            </p>
+                            <div class="bg-white p-6 rounded-xl">
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        **Book an appointment:** You must book a physical appointment at the Consulate to submit your application and documents.
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        **Online Application:** The online application on the UGE (Spanish authority) website requires a digital certificate and NIE number, which is why a relocation specialist is often recommended.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget Tab -->
+                <div id="Budget" class="tab-content">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold gradient-text mb-4">Financial Planning</h2>
+                        <p class="text-xl text-gray-600">Your complete budget breakdown for Valencia living</p>
+                    </div>
+
+                    <!-- Edit/Save Button Container -->
+                    <div class="flex justify-end mb-4">
+                        <button id="editBudgetBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Edit Budget
+                        </button>
+                        <button id="saveBudgetBtn" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hidden">
+                            Save Changes
+                        </button>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-6 mb-8">
+                        <div class="card-hover bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-2xl border border-green-200 text-center">
+                            <div class="text-3xl font-bold gradient-text mb-2">
+                                $<span id="totalIncomeDisplay">8,188</span>
+                                <input id="totalIncomeInput" type="number" class="hidden w-28 text-center" value="8188.00" step="0.01">
+                            </div>
+                            <p class="text-gray-600">Total Monthly Income</p>
+                        </div>
+                        <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200 text-center">
+                            <div class="text-3xl font-bold gradient-text mb-2">
+                                $<span id="totalExpensesDisplay">5,295</span>
+                                <input id="totalExpensesInput" type="number" class="hidden w-28 text-center" value="5295.00" step="0.01">
+                            </div>
+                            <p class="text-gray-600">Projected Expenses</p>
+                        </div>
+                        <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-2xl border border-purple-200 text-center">
+                            <div class="text-3xl font-bold gradient-text mb-2">
+                                $<span id="monthlySurplusDisplay">2,893</span>
+                                <input id="monthlySurplusInput" type="number" class="hidden w-28 text-center" value="2893.00" step="0.01" readonly>
+                            </div>
+                            <p class="text-gray-600">Monthly Surplus</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+                        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4">
+                            <h3 class="text-xl font-bold">Monthly Budget Breakdown</h3>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Category</th>
+                                        <th class="px-6 py-4 text-right text-sm font-semibold text-gray-900">USD</th>
+                                        <th class="px-6 py-4 text-right text-sm font-semibold text-gray-900">EUR (Valencia)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50 bg-green-50">
+                                        <td class="px-6 py-4 font-semibold">Total Monthly Income</td>
+                                        <td class="px-6 py-4 text-right font-semibold text-green-600">
+                                            $<span id="incomeRowDisplay">8,188.00</span>
+                                            <input id="incomeRowInput" type="number" class="hidden w-28 text-right" value="8188.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right font-semibold text-green-600">
+                                            ~€<span id="incomeRowEuroDisplay">7,615</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">VA CP</td>
+                                        <td class="px-6 py-4 text-right">$<span id="vaCpIncomeDisplay">4,688.00</span>
+                                            <input id="vaCpIncomeInput" type="number" class="hidden w-28 text-right" value="4688.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="vaCpIncomeEuroDisplay">4,360</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Emily Pay</td>
+                                        <td class="px-6 py-4 text-right">$<span id="emilyPayIncomeDisplay">2,000.00</span>
+                                            <input id="emilyPayIncomeInput" type="number" class="hidden w-28 text-right" value="2000.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="emilyPayIncomeEuroDisplay">1,860</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Investments</td>
+                                        <td class="px-6 py-4 text-right">$<span id="investmentsIncomeDisplay">1,500.00</span>
+                                            <input id="investmentsIncomeInput" type="number" class="hidden w-28 text-right" value="1500.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="investmentsIncomeEuroDisplay">1,395</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50 bg-blue-50">
+                                        <td class="px-6 py-4 font-semibold">Total Projected Expenses</td>
+                                        <td class="px-6 py-4 text-right font-semibold text-blue-600">
+                                            $<span id="expensesRowDisplay">4,585.00</span>
+                                            <input id="expensesRowInput" type="number" class="hidden w-28 text-right" value="4585.00" step="0.01" readonly>
+                                        </td>
+                                        <td class="px-6 py-4 text-right font-semibold text-blue-600">
+                                            ~€<span id="expensesRowEuroDisplay">4,264</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Rent</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="rentDisplay">1,900.00</span>
+                                            <input id="rentInput" type="number" class="hidden w-28 text-right" value="1900.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            €<span id="rentEuroDisplay">1,767</span> - €<span id="rentEuroRangeDisplay">2,000</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Oakland Property Costs</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandCostsDisplay">1,220.00</span>
+                                            <input id="oaklandCostsInput" type="number" class="hidden w-28 text-right" value="1220.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            -
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Mobile</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="mobileDisplay">51.78</span>
+                                            <input id="mobileInput" type="number" class="hidden w-28 text-right" value="51.78" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="mobileEuroDisplay">48</span>
+                                        </td>
+                                    </tr>
+                                     <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Groceries</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="groceriesDisplay">431.50</span>
+                                            <input id="groceriesInput" type="number" class="hidden w-28 text-right" value="431.50" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            €<span id="groceriesEuroDisplay">480</span> - €<span id="groceriesEuroRangeDisplay">550</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Dining Out</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="diningOutDisplay">86.30</span>
+                                            <input id="diningOutInput" type="number" class="hidden w-28 text-right" value="86.30" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="diningOutEuroDisplay">80</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Netflix</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="netflixDisplay">18.87</span>
+                                            <input id="netflixInput" type="number" class="hidden w-28 text-right" value="18.87" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="netflixEuroDisplay">18</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Spotify</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="spotifyDisplay">15.70</span>
+                                            <input id="spotifyInput" type="number" class="hidden w-28 text-right" value="15.70" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="spotifyEuroDisplay">15</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Hulu/Disney+</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="huluDisneyDisplay">25.71</span>
+                                            <input id="huluDisneyInput" type="number" class="hidden w-28 text-right" value="25.71" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="huluDisneyEuroDisplay">24</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Healthcare</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="healthcareDisplay">129.45</span>
+                                            <input id="healthcareInput" type="number" class="hidden w-28 text-right" value="129.45" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="healthcareEuroDisplay">120</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Public Transportation</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="transportationDisplay">129.45</span>
+                                            <input id="transportationInput" type="number" class="hidden w-28 text-right" value="129.45" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="transportationEuroDisplay">120</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Clothing</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="clothingDisplay">129.45</span>
+                                            <input id="clothingInput" type="number" class="hidden w-28 text-right" value="129.45" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="clothingEuroDisplay">120</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Miscellaneous Spending</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="miscSpendingDisplay">172.60</span>
+                                            <input id="miscSpendingInput" type="number" class="hidden w-28 text-right" value="172.60" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="miscSpendingEuroDisplay">160</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-100 p-8 rounded-2xl border border-yellow-200">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Initial & Unexpected Costs</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800">Rental Deposit</h4>
+                                <p class="text-gray-600 text-sm">Typically one month's rent</p>
+                                <input id="rentDepositInput" type="number" class="hidden w-28 text-right" value="1900.00" step="0.01">
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800">Agency Fees</h4>
+                                <p class="text-gray-600 text-sm">One month's rent if using agent</p>
+                                <input id="agencyFeesInput" type="number" class="hidden w-28 text-right" value="1900.00" step="0.01">
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800">TIE Card Fees</h4>
+                                <p class="text-gray-600 text-sm">€<span id="tieFeesEuro">16.08</span> per person</p>
+                                <input id="tieFeesInput" type="number" class="hidden w-20 text-center" value="16.08" step="0.01">
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <h4 class="font-semibold text-gray-800">Moving Costs</h4>
+                                <p class="text-gray-600 text-sm">International shipping & storage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schools Tab -->
+                <div id="Schools" class="tab-content">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold gradient-text mb-4">School Options in Valencia</h2>
+                        <p class="text-xl text-gray-600">A look at some of the international schools available</p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-6 mb-8">
+                        <!-- School 1 -->
+                        <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Second Body Montessori School</h3>
+                            <p class="text-gray-600 mb-4">
+                                **Tuition (Approx.):** €700 - €1,300/month
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                A Montessori school located in central Valencia. Its central location makes it ideal for families who want to live in the city center.
+                            </p>
+                            <div class="mt-4">
+                                <h4 class="font-semibold text-gray-800">Nearest Towns:</h4>
+                                <ul class="list-disc list-inside text-gray-700 mt-1">
+                                    <li>Valencia City Center</li>
+                                    <li>Ruzafa</li>
+                                    <li>Campanar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- School 2 -->
+                        <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-2xl border border-purple-200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Mammolina Montessori</h3>
+                            <p class="text-gray-600 mb-4">
+                                **Tuition (Approx.):** €700 - €1,300/month
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Located in the Paterna area, about 20 minutes from the city center. It offers a Montessori curriculum in a suburban setting.
+                            </p>
+                            <div class="mt-4">
+                                <h4 class="font-semibold text-gray-800">Nearest Towns:</h4>
+                                <ul class="list-disc list-inside text-gray-700 mt-1">
+                                    <li>Paterna</li>
+                                    <li>La Cañada</li>
+                                    <li>Godella</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- School 3 -->
+                        <div class="card-hover bg-gradient-to-br from-yellow-50 to-orange-100 p-6 rounded-2xl border border-yellow-200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Montessori School Tavernes Blanques</h3>
+                            <p class="text-gray-600 mb-4">
+                                **Tuition (Approx.):** €700 - €1,300/month
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Situated just outside Valencia in Tavernes Blanques, providing a peaceful environment while still being close to the city.
+                            </p>
+                            <div class="mt-4">
+                                <h4 class="font-semibold text-gray-800">Nearest Towns:</h4>
+                                <ul class="list-disc list-inside text-gray-700 mt-1">
+                                    <li>Tavernes Blanques</li>
+                                    <li>Alboraya</li>
+                                    <li>Rocafort</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-100 p-6 rounded-2xl shadow-inner">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Map of Schools</h3>
+                        <div id="map" class="w-full h-96 rounded-xl overflow-hidden shadow-lg"></div>
+                    </div>
+                </div>
+
+                <!-- Oakland Property Tab -->
+                <div id="OaklandProperty" class="tab-content">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold gradient-text mb-4">Oakland Park Property Costs</h2>
+                        <p class="text-xl text-gray-600">A look at the monthly expenses for your property in the U.S.</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+                        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4">
+                            <h3 class="text-xl font-bold">Monthly Expense Breakdown</h3>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Category</th>
+                                        <th class="px-6 py-4 text-right text-sm font-semibold text-gray-900">USD</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">HOA</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandHOADisplay">215.00</span>
+                                            <input id="oaklandHOAInput" type="number" class="hidden w-28 text-right" value="215.00" step="0.01">
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Security System</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandSecurityDisplay">45.00</span>
+                                            <input id="oaklandSecurityInput" type="number" class="hidden w-28 text-right" value="45.00" step="0.01">
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Car Insurance</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandCarInsuranceDisplay">150.00</span>
+                                            <input id="oaklandCarInsuranceInput" type="number" class="hidden w-28 text-right" value="150.00" step="0.01">
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Electricity</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandElectricityDisplay">100.00</span>
+                                            <input id="oaklandElectricityInput" type="number" class="hidden w-28 text-right" value="100.00" step="0.01">
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Taxes</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandTaxesDisplay">710.00</span>
+                                            <input id="oaklandTaxesInput" type="number" class="hidden w-28 text-right" value="710.00" step="0.01">
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100 font-semibold">
+                                        <td class="px-6 py-4">Total Oakland Expenses</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandTotalExpensesDisplay">1,220.00</span>
+                                            <input id="oaklandTotalExpensesInput" type="number" class="hidden w-28 text-right" value="1220.00" readonly>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button id="editOaklandBudgetBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Edit Oakland Budget
+                        </button>
+                         <button id="saveOaklandBudgetBtn" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hidden">
+                            Save Oakland Changes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Logistics Tab -->
+                <div id="Logistics" class="tab-content">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold gradient-text mb-4">Valencia Logistics</h2>
+                        <p class="text-xl text-gray-600">Essential steps once you arrive in Spain</p>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl border border-blue-200">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">1</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800">Register for Padrón</h3>
+                            </div>
+                            <p class="text-gray-700 mb-4">
+                                The padrón is the local census registration - legally required and necessary for your TIE application and school enrollment.
+                            </p>
+                            <div class="bg-white p-6 rounded-xl">
+                                <h4 class="font-semibold text-gray-800 mb-3">Required Documents:</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Valid passport
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Rental contract (original and copy)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Completed application form
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        All family members over 18 must sign
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl border border-green-200">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">2</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800">Apply for TIE Card</h3>
+                            </div>
+                            <p class="text-gray-700 mb-4">
+                                Your physical residency card - must be applied for within 30 days of entering Spain.
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-white p-6 rounded-xl">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Process Steps:</h4>
+                                    <ol class="space-y-2 text-gray-700 text-sm">
+                                        <li>1. Book cita previa online</li>
+                                        <li>2. Pay fee using Modelo 790 (€16.08)</li>
+                                        <li>3. Attend appointment with documents</li>
+                                        <li>4. Collect card in 3-6 weeks</li>
+                                    </ol>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl">
+                                    <h4 class="font-semibold text-gray-800 mb-3">Required Documents:</h4>
+                                    <ul class="space-y-2 text-gray-700 text-sm">
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> EX-17 application form
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> Passport with visa stamp
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> Payment receipt
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> 3 passport photos
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span> Padrón certificate
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-2xl border border-purple-200">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">3</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800">School Enrollment</h3>
+                            </div>
+                            <p class="text-gray-700 mb-4">
+                                Enrollment period is typically late April to June for September start.
+                            </p>
+                            <div class="bg-white p-6 rounded-xl">
+                                <h4 class="font-semibold text-gray-800 mb-3">Key Documents:</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Birth certificate (translated & apostilled)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Passport & school transcripts
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        Padrón certificate (proves catchment area)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Google Maps API script
+        function initMap() {
+            const valencia = { lat: 39.4699, lng: -0.3774 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: valencia,
+                mapTypeControl: false,
+                streetViewControl: false,
+            });
+
+            const schools = [
+                {
+                    name: "Second Body Montessori School",
+                    location: { lat: 39.4735, lng: -0.3768 },
+                    address: "Carrer de les Soreries, 2, Ciutat Vella, 46001 València, Valencia, Spain",
+                    info: "Located in central Valencia, ideal for city living."
+                },
+                {
+                    name: "Mammolina Montessori",
+                    location: { lat: 39.5165, lng: -0.4284 },
+                    address: "Carrer de la Senyera, 29, 46115 Alfara del Patriarca, Valencia, Spain",
+                    info: "Located in the Paterna area, a 20-minute drive from the city center."
+                },
+                {
+                    name: "Montessori School Tavernes Blanques",
+                    location: { lat: 39.5028, lng: -0.3601 },
+                    address: "Carrer de Sant Joan, 12, 46001 Tavernes Blanques, Valencia, Spain",
+                    info: "Located just outside Valencia, in a quieter, suburban environment."
+                }
+            ];
+
+            const infoWindow = new google.maps.InfoWindow();
+
+            schools.forEach(school => {
+                const marker = new google.maps.Marker({
+                    position: school.location,
+                    map: map,
+                    title: school.name,
+                });
+
+                marker.addListener("click", () => {
+                    infoWindow.close();
+                    infoWindow.setContent(`
+                        <h3 style="font-weight: bold; margin-bottom: 5px;">${school.name}</h3>
+                        <p>${school.address}</p>
+                        <p>${school.info}</p>
+                    `);
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+        
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            
+            // Hide all tab content
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all buttons
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            // Show selected tab and mark button as active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+
+            // Load the map if the Schools tab is active
+            if (tabName === 'Schools' && typeof google !== 'undefined') {
+                initMap();
+            }
+        }
+        
+        // Add smooth scroll behavior for internal navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some interactive enhancements
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // NEW: Budget Editing Logic
+            const editBtn = document.getElementById('editBudgetBtn');
+            const saveBtn = document.getElementById('saveBudgetBtn');
+            const budgetDisplays = document.querySelectorAll('#Budget .text-right span, #Budget .gradient-text span');
+            const budgetInputs = document.querySelectorAll('#Budget input[type="number"]');
+            const euroExchangeRate = 0.93; // 1 USD = 0.93 EUR, update as needed
+
+            function updateTotals() {
+                // Get values from inputs (use displayed values if not in edit mode)
+                const vaCpIncome = parseFloat(document.getElementById('vaCpIncomeInput').value);
+                const emilyPayIncome = parseFloat(document.getElementById('emilyPayIncomeInput').value);
+                const investmentsIncome = parseFloat(document.getElementById('investmentsIncomeInput').value);
+                const rentUSD = parseFloat(document.getElementById('rentInput').value);
+                const oaklandCosts = parseFloat(document.getElementById('oaklandCostsInput').value);
+                const mobileUSD = parseFloat(document.getElementById('mobileInput').value);
+                const groceriesUSD = parseFloat(document.getElementById('groceriesInput').value);
+                const diningOutUSD = parseFloat(document.getElementById('diningOutInput').value);
+                const netflixUSD = parseFloat(document.getElementById('netflixInput').value);
+                const spotifyUSD = parseFloat(document.getElementById('spotifyInput').value);
+                const huluDisneyUSD = parseFloat(document.getElementById('huluDisneyInput').value);
+                const healthcareUSD = parseFloat(document.getElementById('healthcareInput').value);
+                const transportationUSD = parseFloat(document.getElementById('transportationInput').value);
+                const clothingUSD = parseFloat(document.getElementById('clothingInput').value);
+                const miscSpendingUSD = parseFloat(document.getElementById('miscSpendingInput').value);
+                const rentDepositInput = parseFloat(document.getElementById('rentInput').value);
+                const agencyFeesInput = parseFloat(document.getElementById('rentInput').value);
+                const tieFeesInput = parseFloat(document.getElementById('tieFeesInput').value);
+
+                const totalIncome = vaCpIncome + emilyPayIncome + investmentsIncome;
+
+                // Calculate new total expenses
+                const newMonthlyExpenses = rentUSD + oaklandCosts + mobileUSD + groceriesUSD + diningOutUSD + netflixUSD + spotifyUSD + huluDisneyUSD + healthcareUSD + transportationUSD + clothingUSD + miscSpendingUSD;
+                const newMonthlySurplus = totalIncome - newMonthlyExpenses;
+
+                // Update the display for income, expenses, and surplus
+                document.getElementById('totalIncomeDisplay').textContent = totalIncome.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('totalIncomeInput').value = totalIncome.toFixed(2);
+                
+                document.getElementById('totalExpensesDisplay').textContent = newMonthlyExpenses.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('totalExpensesInput').value = newMonthlyExpenses.toFixed(2);
+                
+                document.getElementById('monthlySurplusDisplay').textContent = newMonthlySurplus.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('monthlySurplusInput').value = newMonthlySurplus.toFixed(2);
+
+                document.getElementById('oneTimeTotalDisplay').textContent = (rentDepositInput + agencyFeesInput + (tieFeesInput * 3)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oneTimeTotalInput').value = (rentDepositInput + agencyFeesInput + (tieFeesInput * 3)).toFixed(2);
+                
+                // Update EUR display
+                document.getElementById('vaCpIncomeEuroDisplay').textContent = (vaCpIncome * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('emilyPayIncomeEuroDisplay').textContent = (emilyPayIncome * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('investmentsIncomeEuroDisplay').textContent = (investmentsIncome * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('incomeRowEuroDisplay').textContent = (totalIncome * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('expensesRowEuroDisplay').textContent = (newMonthlyExpenses * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('rentEuroDisplay').textContent = (rentUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oaklandCostsEuroDisplay').textContent = (oaklandCosts * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('mobileEuroDisplay').textContent = (mobileUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('groceriesEuroDisplay').textContent = (groceriesUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('diningOutEuroDisplay').textContent = (diningOutUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('netflixEuroDisplay').textContent = (netflixUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('spotifyEuroDisplay').textContent = (spotifyUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('huluDisneyEuroDisplay').textContent = (huluDisneyUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('healthcareEuroDisplay').textContent = (healthcareUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('transportationEuroDisplay').textContent = (transportationUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('clothingEuroDisplay').textContent = (clothingUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('miscSpendingEuroDisplay').textContent = (miscSpendingUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('rentDepositEuroDisplay').textContent = (rentDepositInput * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('agencyFeesEuroDisplay').textContent = (agencyFeesInput * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('tieFeesEuroDisplay').textContent = (tieFeesInput * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            // NEW: Oakland Budget Logic
+            const editOaklandBtn = document.getElementById('editOaklandBudgetBtn');
+            const saveOaklandBtn = document.getElementById('saveOaklandBudgetBtn');
+            const oaklandDisplays = document.querySelectorAll('#OaklandProperty span');
+            const oaklandInputs = document.querySelectorAll('#OaklandProperty input[type="number"]');
+
+            function updateOaklandTotals() {
+                const oaklandHOA = parseFloat(document.getElementById('oaklandHOAInput').value) || 0;
+                const oaklandSecurity = parseFloat(document.getElementById('oaklandSecurityInput').value) || 0;
+                const oaklandCarInsurance = parseFloat(document.getElementById('oaklandCarInsuranceInput').value) || 0;
+                const oaklandElectricity = parseFloat(document.getElementById('oaklandElectricityInput').value) || 0;
+                const oaklandTaxes = parseFloat(document.getElementById('oaklandTaxesInput').value) || 0;
+                const totalOaklandExpenses = oaklandHOA + oaklandSecurity + oaklandCarInsurance + oaklandElectricity + oaklandTaxes;
+
+                document.getElementById('oaklandTotalExpensesDisplay').textContent = totalOaklandExpenses.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oaklandTotalExpensesInput').value = totalOaklandExpenses.toFixed(2);
+                document.getElementById('oaklandCostsInput').value = totalOaklandExpenses.toFixed(2);
+                updateTotals();
+            }
+
+            editOaklandBtn.addEventListener('click', () => {
+                editOaklandBtn.classList.add('hidden');
+                saveOaklandBtn.classList.remove('hidden');
+                oaklandDisplays.forEach(el => el.classList.add('hidden'));
+                oaklandInputs.forEach(el => el.classList.remove('hidden'));
+            });
+
+            saveOaklandBtn.addEventListener('click', () => {
+                editOaklandBtn.classList.remove('hidden');
+                saveOaklandBtn.classList.add('hidden');
+                oaklandDisplays.forEach(el => el.classList.remove('hidden'));
+                oaklandInputs.forEach(el => el.classList.add('hidden'));
+                
+                document.getElementById('oaklandHOADisplay').textContent = parseFloat(document.getElementById('oaklandHOAInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oaklandSecurityDisplay').textContent = parseFloat(document.getElementById('oaklandSecurityInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oaklandCarInsuranceDisplay').textContent = parseFloat(document.getElementById('oaklandCarInsuranceInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oaklandElectricityDisplay').textContent = parseFloat(document.getElementById('oaklandElectricityInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oaklandTaxesDisplay').textContent = parseFloat(document.getElementById('oaklandTaxesInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                
+                updateOaklandTotals();
+            });
+
+            oaklandInputs.forEach(input => {
+                input.addEventListener('input', updateOaklandTotals);
+            });
+            
+            // Add event listeners for edit and save buttons
+            editBtn.addEventListener('click', () => {
+                editBtn.classList.add('hidden');
+                saveBtn.classList.remove('hidden');
+                
+                // Show all input fields and hide all display spans
+                budgetDisplays.forEach(el => el.classList.add('hidden'));
+                budgetInputs.forEach(el => el.classList.remove('hidden'));
+            });
+
+            saveBtn.addEventListener('click', () => {
+                editBtn.classList.remove('hidden');
+                saveBtn.classList.add('hidden');
+
+                // Hide all input fields and show all display spans
+                budgetDisplays.forEach(el => el.classList.remove('hidden'));
+                budgetInputs.forEach(el => el.classList.add('hidden'));
+
+                // Update the display text with the new input values
+                document.getElementById('totalIncomeDisplay').textContent = parseFloat(document.getElementById('totalIncomeInput').value).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('incomeRowDisplay').textContent = parseFloat(document.getElementById('incomeRowInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('vaCpIncomeDisplay').textContent = parseFloat(document.getElementById('vaCpIncomeInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('emilyPayIncomeDisplay').textContent = parseFloat(document.getElementById('emilyPayIncomeInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('investmentsIncomeDisplay').textContent = parseFloat(document.getElementById('investmentsIncomeInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('rentDisplay').textContent = parseFloat(document.getElementById('rentInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('oaklandCostsDisplay').textContent = parseFloat(document.getElementById('oaklandCostsInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('mobileDisplay').textContent = parseFloat(document.getElementById('mobileInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('groceriesDisplay').textContent = parseFloat(document.getElementById('groceriesInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('diningOutDisplay').textContent = parseFloat(document.getElementById('diningOutInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('netflixDisplay').textContent = parseFloat(document.getElementById('netflixInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('spotifyDisplay').textContent = parseFloat(document.getElementById('spotifyInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('huluDisneyDisplay').textContent = parseFloat(document.getElementById('huluDisneyInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('healthcareDisplay').textContent = parseFloat(document.getElementById('healthcareInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('transportationDisplay').textContent = parseFloat(document.getElementById('transportationInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('clothingDisplay').textContent = parseFloat(document.getElementById('clothingInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('miscSpendingDisplay').textContent = parseFloat(document.getElementById('miscSpendingInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('rentDepositInput').value = parseFloat(document.getElementById('rentInput').value).toFixed(2);
+                document.getElementById('agencyFeesInput').value = parseFloat(document.getElementById('rentInput').value).toFixed(2);
+
+                
+                // Recalculate and update the totals
+                updateTotals();
+            });
+
+            // Add event listeners to individual input fields to update the totals in real-time
+            budgetInputs.forEach(input => {
+                input.addEventListener('input', updateTotals);
+            });
+
+            // Initial calculation to set everything up correctly on page load
+            updateTotals();
+            updateOaklandTotals();
+        });
+    </script>
+    <!-- 
+        The Google Maps API key is missing. The map will not load until you add a valid API key.
+        You can get one here: https://developers.google.com/maps/documentation/javascript/get-api-key
+        Once you have your key, replace "YOUR_API_KEY" in the line below.
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
