@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -143,6 +143,7 @@
             color: #6B7280; /* Gray-500 */
         }
     </style>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxCCOQjjsn-L5diDAqegPf6FEi3mwAWYA&callback=initMap"></script>
 </head>
 <body class="min-h-screen p-4 sm:p-8">
     
@@ -1170,17 +1171,35 @@
             </div>
         </div>
     </div>
-<div class="bg-gray-100 p-6 rounded-2xl shadow-inner">
-    <h3 class="text-2xl font-bold text-gray-800 mb-4">Map of Schools</h3>
-    <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg" id="map">
-        <!-- Iframe is loaded here dynamically by JavaScript -->
-    </div>
-</div>
     <script>
-                    `;
-        }
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: {lat: 39.5028, lng: -0.3801}
+            });
 
-        // Handle tab switching and map loading
+            // Second Body Montessori School
+            new google.maps.Marker({
+                position: {lat: 39.4704, lng: -0.3768},
+                map: map,
+                title: 'Second Body Montessori School'
+            });
+
+            // Mammolina Montessori
+            new google.maps.Marker({
+                position: {lat: 39.5292, lng: -0.4284},
+                map: map,
+                title: 'Mammolina Montessori'
+            });
+
+            // Valencia Montessori School (Tavernes Blanques)
+            new google.maps.Marker({
+                position: {lat: 39.5085, lng: -0.3541},
+                map: map,
+                title: 'Valencia Montessori School'
+            });
+        }
+        
         function openTab(evt, tabName) {
             var i, tabContent, tabButtons;
             
@@ -1201,14 +1220,12 @@
             evt.currentTarget.classList.add("active");
 
             // Load the map when the Schools tab is active
-            if (tabName === 'Schools') {
-                openMap();
+            if (tabName === 'Schools' && typeof google !== 'undefined') {
+                initMap();
             }
         }
         
-        // Add smooth scroll behavior for internal navigation
         document.addEventListener('DOMContentLoaded', function() {
-            // Add some interactive enhancements
             const cards = document.querySelectorAll('.card-hover');
             cards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
@@ -1225,10 +1242,9 @@
             const saveBtn = document.getElementById('saveBudgetBtn');
             const budgetDisplays = document.querySelectorAll('#Budget .text-right span, #Budget .gradient-text span');
             const budgetInputs = document.querySelectorAll('#Budget input[type="number"]');
-            const euroExchangeRate = 0.93; // 1 USD = 0.93 EUR, update as needed
+            const euroExchangeRate = 0.93;
 
             function updateTotals() {
-                // Get values from inputs (use displayed values if not in edit mode)
                 const vaCpIncome = parseFloat(document.getElementById('vaCpIncomeInput').value);
                 const emilyPayIncome = parseFloat(document.getElementById('emilyPayIncomeInput').value);
                 const investmentsIncome = parseFloat(document.getElementById('investmentsIncomeInput').value);
@@ -1249,15 +1265,11 @@
                 const agencyFeesInput = parseFloat(document.getElementById('rentInput').value);
                 const tieFeesInput = parseFloat(document.getElementById('tieFeesInput').value);
                 const michelangelosSchoolUSD = parseFloat(document.getElementById('michelangelosSchoolInput').value);
-
-
                 const totalIncome = vaCpIncome + emilyPayIncome + investmentsIncome;
 
-                // Calculate new total expenses
                 const newMonthlyExpenses = rentUSD + oaklandCosts + groceriesUSD + mobileUSD + internetUSD + entertainmentUSD + valenciaWaterUSD + communityFeesUSD + gymUSD + homeInsuranceUSD + diningOutUSD + clothingUSD + miscSpendingUSD + michelangelosSchoolUSD;
                 const newMonthlySurplus = totalIncome - newMonthlyExpenses;
 
-                // Update the display for income, expenses, and surplus
                 document.getElementById('totalIncomeDisplay').textContent = totalIncome.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('totalIncomeInput').value = totalIncome.toFixed(2);
                 
@@ -1270,7 +1282,6 @@
                 document.getElementById('oneTimeTotalDisplay').textContent = (rentDepositInput + agencyFeesInput + (tieFeesInput * 3)).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('oneTimeTotalInput').value = (rentDepositInput + agencyFeesInput + (tieFeesInput * 3)).toFixed(2);
                 
-                // Update EUR display
                 document.getElementById('vaCpIncomeEuroDisplay').textContent = (vaCpIncome * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('emilyPayIncomeEuroDisplay').textContent = (emilyPayIncome * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('investmentsIncomeEuroDisplay').textContent = (investmentsIncome * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -1398,6 +1409,6 @@
             updateTotals();
             updateOaklandTotals();
         });
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxCCOQjjsn-L5diDAqegPf6FEi3mwAWYA&callback=initMap"></script>
+    </script>
 </body>
 </html>
