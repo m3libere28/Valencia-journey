@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -124,6 +124,24 @@
             0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
             50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
         }
+        
+        /* Checklist styles */
+        .checklist-item {
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .checklist-item.checked .checklist-icon {
+            background-color: #10B981; /* Green-500 */
+            border-color: #10B981;
+        }
+        .checklist-item.checked .checklist-icon svg {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .checklist-item.checked .checklist-text {
+            text-decoration: line-through;
+            color: #6B7280; /* Gray-500 */
+        }
     </style>
 </head>
 <body class="min-h-screen p-4 sm:p-8">
@@ -246,48 +264,185 @@
                     </div>
                     
                     <div class="space-y-6">
+                         <!-- August 2025 -->
                         <div class="card-hover bg-gradient-to-r from-red-50 to-orange-100 p-6 rounded-xl border-l-4 border-red-500 relative overflow-hidden">
                             <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Aug 2025</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Foundation Phase</h3>
-                            <p class="text-gray-700">Prepare your Lake Worth home for sale and begin visa document collection. Start with marriage and birth certificate notarization and apostilling.</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Foundation Phase: The Start</h3>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Prepare your Lake Worth home for sale.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Begin visa document collection.</span>
+                            </div>
                         </div>
                         
+                        <!-- September 2025 -->
                         <div class="card-hover bg-gradient-to-r from-orange-50 to-yellow-100 p-6 rounded-xl border-l-4 border-orange-500 relative">
                             <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Sep 2025</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Documentation Sprint</h3>
-                            <p class="text-gray-700">Organize digital and physical document folders. Submit apostille requests to Florida Department of State. Research 3-4 potential schools in Valencia.</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Documentation Sprint: Get Organized</h3>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Organize digital and physical document folders.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Submit apostille requests to Florida Department of State.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Research potential schools in Valencia.</span>
+                            </div>
                         </div>
                         
+                        <!-- October 2025 -->
                         <div class="card-hover bg-gradient-to-r from-yellow-50 to-green-100 p-6 rounded-xl border-l-4 border-yellow-500 relative">
                             <div class="absolute top-4 right-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Oct 2025</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Financial Planning</h3>
-                            <p class="text-gray-700">Finalize Spanish living budget. Research private health insurance (Sanitas, Adeslas, DKV). Gather VA income letters and 12-month investment statements.</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Financial Planning: Secure Your Future</h3>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Finalize your Spanish living budget.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Research and select private health insurance.</span>
+                            </div>
                         </div>
                         
+                        <!-- November 2025 -->
                         <div class="card-hover bg-gradient-to-r from-green-50 to-blue-100 p-6 rounded-xl border-l-4 border-green-500 relative">
                             <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Nov 2025</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Translation & Background</h3>
-                            <p class="text-gray-700">Begin certified Spanish translations of key documents. Order FBI Background Check. Prepare medical certificate requirements.</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Translation & Background Checks</h3>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Begin certified Spanish translations of key documents.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Order FBI Background Check for all adults.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Prepare medical certificate requirements.</span>
+                            </div>
                         </div>
                         
+                        <!-- December 2025 -->
                         <div class="card-hover bg-gradient-to-r from-blue-50 to-indigo-100 p-6 rounded-xl border-l-4 border-blue-500 relative">
                             <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Dec 2025</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Appointment Booking</h3>
-                            <p class="text-gray-700">Draft cover letter and document index. Book Miami consulate appointment via BLS portal. Research short-term furnished rentals in Valencia.</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Appointment Booking & Logistics</h3>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Book Miami consulate appointment via BLS portal.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Draft cover letter and document index.</span>
+                            </div>
                         </div>
                         
+                        <!-- January 2026 -->
                         <div class="card-hover bg-gradient-to-r from-indigo-50 to-purple-100 p-6 rounded-xl border-l-4 border-indigo-500 relative">
                             <div class="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Jan 2026</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Consulate Submission</h3>
-                            <p class="text-gray-700">Complete medical certificate appointment. Attend Miami consulate to submit your DNV application. The big milestone!</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Consulate Submission: The Big Day</h3>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Complete medical certificate appointment.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Attend Miami consulate to submit your DNV application.</span>
+                            </div>
                         </div>
                         
+                        <!-- April-June 2026 -->
                         <div class="card-hover bg-gradient-to-r from-purple-50 to-pink-100 p-6 rounded-xl border-l-4 border-purple-500 relative">
                             <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Apr-Jun 2026</div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Final Preparations</h3>
-                            <p class="text-gray-700">Secure temporary Valencia housing for padrón registration. Book one-way flights MIA to VLC/MAD. Finalize school enrollment paperwork.</p>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Final Preparations: Ready to Go</h3>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Secure temporary Valencia housing for padrón registration.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 mb-2 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Book one-way flights MIA to VLC/MAD.</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 checklist-item" onclick="this.classList.toggle('checked')">
+                                <span class="checklist-icon w-5 h-5 inline-flex items-center justify-center border-2 border-gray-400 rounded-full mr-3 flex-shrink-0">
+                                    <svg class="w-3 h-3 text-white opacity-0 transform scale-0 transition-all duration-200" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                                    </svg>
+                                </span>
+                                <span class="checklist-text">Finalize school enrollment paperwork.</span>
+                            </div>
                         </div>
                         
+                        <!-- July 2026 -->
                         <div class="card-hover bg-gradient-to-r from-pink-50 to-red-100 p-6 rounded-xl border-l-4 border-pink-500 relative">
                             <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Jul 2026</div>
                             <h3 class="text-xl font-bold text-gray-800 mb-2">¡Bienvenidos a Valencia!</h3>
@@ -463,15 +618,15 @@
                         </div>
                         <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200 text-center">
                             <div class="text-3xl font-bold gradient-text mb-2">
-                                $<span id="totalExpensesDisplay">5,985</span>
-                                <input id="totalExpensesInput" type="number" class="hidden w-28 text-center" value="5985.00" step="0.01">
+                                $<span id="totalExpensesDisplay">6,685</span>
+                                <input id="totalExpensesInput" type="number" class="hidden w-28 text-center" value="6685.00" step="0.01">
                             </div>
                             <p class="text-gray-600">Projected Expenses</p>
                         </div>
                         <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-2xl border border-purple-200 text-center">
                             <div class="text-3xl font-bold gradient-text mb-2">
-                                $<span id="monthlySurplusDisplay">2,203</span>
-                                <input id="monthlySurplusInput" type="number" class="hidden w-28 text-center" value="2203.00" step="0.01" readonly>
+                                $<span id="monthlySurplusDisplay">1,503</span>
+                                <input id="monthlySurplusInput" type="number" class="hidden w-28 text-center" value="1503.00" step="0.01" readonly>
                             </div>
                             <p class="text-gray-600">Monthly Surplus</p>
                         </div>
@@ -528,11 +683,11 @@
                                     <tr class="hover:bg-gray-50 bg-blue-50">
                                         <td class="px-6 py-4 font-semibold">Total Projected Expenses</td>
                                         <td class="px-6 py-4 text-right font-semibold text-blue-600">
-                                            $<span id="expensesRowDisplay">5,985.00</span>
-                                            <input id="expensesRowInput" type="number" class="hidden w-28 text-right" value="5985.00" step="0.01" readonly>
+                                            $<span id="expensesRowDisplay">6,685.00</span>
+                                            <input id="expensesRowInput" type="number" class="hidden w-28 text-right" value="6685.00" step="0.01" readonly>
                                         </td>
                                         <td class="px-6 py-4 text-right font-semibold text-blue-600">
-                                            ~€<span id="expensesRowEuroDisplay">5,566</span>
+                                            ~€<span id="expensesRowEuroDisplay">6,217</span>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -553,6 +708,15 @@
                                         </td>
                                         <td class="px-6 py-4 text-right">
                                             -
+                                        </td>
+                                    </tr>
+                                     <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Michelangelo's School</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="michelangelosSchoolDisplay">700.00</span>
+                                            <input id="michelangelosSchoolInput" type="number" class="hidden w-28 text-right" value="700.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="michelangelosSchoolEuroDisplay">651</span>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -660,15 +824,6 @@
                                             <input id="miscSpendingInput" type="number" class="hidden w-28 text-right" value="172.60" step="0.01">
                                         </td>
                                         <td class="px-6 py-4 text-right">~€<span id="miscSpendingEuroDisplay">160</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4 pl-12">Michelangelo's School</td>
-                                        <td class="px-6 py-4 text-right">
-                                            $<span id="michelangelosSchoolDisplay">700.00</span>
-                                            <input id="michelangelosSchoolInput" type="number" class="hidden w-28 text-right" value="700.00" step="0.01">
-                                        </td>
-                                        <td class="px-6 py-4 text-right">~€<span id="michelangelosSchoolEuroDisplay">651</span>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -809,15 +964,8 @@
 
                     <div class="bg-gray-100 p-6 rounded-2xl shadow-inner">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Map of Schools</h3>
-                        <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
-                            <iframe 
-                                src="https://www.google.com/maps/d/embed?mid=1fFvJ4tN51hG651g9wHqM2l8z0uB8w&ehpvt=1&z=12&ll=39.5028,-0.3801" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy">
-                            </iframe>
+                        <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg" id="map">
+                            <!-- Iframe will be loaded here -->
                         </div>
                     </div>
                 </div>
@@ -1030,7 +1178,7 @@
             const mapContainer = document.getElementById('map');
             mapContainer.innerHTML = `
                 <iframe
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxCCOQjjsn-L5diDAqegPf6FEi3mwAWYA&callback=initMap"
+                    src="https://www.google.com/maps/d/embed?mid=1fFvJ4tN51hG651g9wHqM2l8z0uB8w&ehpvt=1&z=12&ll=39.5028,-0.3801"
                     width="100%"
                     height="100%"
                     style="border:0;"
@@ -1259,5 +1407,5 @@
             updateOaklandTotals();
         });
     </script>
-    </body>
+</body>
 </html>
