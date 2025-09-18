@@ -463,15 +463,15 @@
                         </div>
                         <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200 text-center">
                             <div class="text-3xl font-bold gradient-text mb-2">
-                                $<span id="totalExpensesDisplay">5,295</span>
-                                <input id="totalExpensesInput" type="number" class="hidden w-28 text-center" value="5295.00" step="0.01">
+                                $<span id="totalExpensesDisplay">5,985</span>
+                                <input id="totalExpensesInput" type="number" class="hidden w-28 text-center" value="5985.00" step="0.01">
                             </div>
                             <p class="text-gray-600">Projected Expenses</p>
                         </div>
                         <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-2xl border border-purple-200 text-center">
                             <div class="text-3xl font-bold gradient-text mb-2">
-                                $<span id="monthlySurplusDisplay">2,893</span>
-                                <input id="monthlySurplusInput" type="number" class="hidden w-28 text-center" value="2893.00" step="0.01" readonly>
+                                $<span id="monthlySurplusDisplay">2,203</span>
+                                <input id="monthlySurplusInput" type="number" class="hidden w-28 text-center" value="2203.00" step="0.01" readonly>
                             </div>
                             <p class="text-gray-600">Monthly Surplus</p>
                         </div>
@@ -528,11 +528,11 @@
                                     <tr class="hover:bg-gray-50 bg-blue-50">
                                         <td class="px-6 py-4 font-semibold">Total Projected Expenses</td>
                                         <td class="px-6 py-4 text-right font-semibold text-blue-600">
-                                            $<span id="expensesRowDisplay">4,585.00</span>
-                                            <input id="expensesRowInput" type="number" class="hidden w-28 text-right" value="4585.00" step="0.01" readonly>
+                                            $<span id="expensesRowDisplay">5,985.00</span>
+                                            <input id="expensesRowInput" type="number" class="hidden w-28 text-right" value="5985.00" step="0.01" readonly>
                                         </td>
                                         <td class="px-6 py-4 text-right font-semibold text-blue-600">
-                                            ~€<span id="expensesRowEuroDisplay">4,264</span>
+                                            ~€<span id="expensesRowEuroDisplay">5,566</span>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -548,31 +548,91 @@
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 pl-12">Oakland Property Costs</td>
                                         <td class="px-6 py-4 text-right">
-                                            $<span id="oaklandCostsDisplay">1,220.00</span>
-                                            <input id="oaklandCostsInput" type="number" class="hidden w-28 text-right" value="1220.00" step="0.01">
+                                            $<span id="oaklandCostsDisplay">1,304.00</span>
+                                            <input id="oaklandCostsInput" type="number" class="hidden w-28 text-right" value="1304.00" step="0.01">
                                         </td>
                                         <td class="px-6 py-4 text-right">
                                             -
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4 pl-12">Mobile</td>
-                                        <td class="px-6 py-4 text-right">
-                                            $<span id="mobileDisplay">51.78</span>
-                                            <input id="mobileInput" type="number" class="hidden w-28 text-right" value="51.78" step="0.01">
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            ~€<span id="mobileEuroDisplay">48</span>
-                                        </td>
-                                    </tr>
-                                     <tr class="hover:bg-gray-50">
                                         <td class="px-6 py-4 pl-12">Groceries</td>
                                         <td class="px-6 py-4 text-right">
-                                            $<span id="groceriesDisplay">431.50</span>
-                                            <input id="groceriesInput" type="number" class="hidden w-28 text-right" value="431.50" step="0.01">
+                                            $<span id="groceriesDisplay">600.00</span>
+                                            <input id="groceriesInput" type="number" class="hidden w-28 text-right" value="600.00" step="0.01">
                                         </td>
                                         <td class="px-6 py-4 text-right">
-                                            €<span id="groceriesEuroDisplay">480</span> - €<span id="groceriesEuroRangeDisplay">550</span>
+                                            €<span id="groceriesEuroDisplay">558</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Mobile</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="mobileDisplay">130.00</span>
+                                            <input id="mobileInput" type="number" class="hidden w-28 text-right" value="130.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="mobileEuroDisplay">121</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Internet</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="internetDisplay">55.00</span>
+                                            <input id="internetInput" type="number" class="hidden w-28 text-right" value="55.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="internetEuroDisplay">51</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Entertainment</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="entertainmentDisplay">300.00</span>
+                                            <input id="entertainmentInput" type="number" class="hidden w-28 text-right" value="300.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="entertainmentEuroDisplay">279</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Water</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="valenciaWaterDisplay">40.00</span>
+                                            <input id="valenciaWaterInput" type="number" class="hidden w-28 text-right" value="40.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="valenciaWaterEuroDisplay">37</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Community Fees</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="communityFeesDisplay">75.00</span>
+                                            <input id="communityFeesInput" type="number" class="hidden w-28 text-right" value="75.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="communityFeesEuroDisplay">70</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Gym</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="gymDisplay">50.00</span>
+                                            <input id="gymInput" type="number" class="hidden w-28 text-right" value="50.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="gymEuroDisplay">47</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Home Insurance</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="homeInsuranceDisplay">25.00</span>
+                                            <input id="homeInsuranceInput" type="number" class="hidden w-28 text-right" value="25.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            ~€<span id="homeInsuranceEuroDisplay">23</span>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -582,51 +642,6 @@
                                             <input id="diningOutInput" type="number" class="hidden w-28 text-right" value="86.30" step="0.01">
                                         </td>
                                         <td class="px-6 py-4 text-right">~€<span id="diningOutEuroDisplay">80</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4 pl-12">Netflix</td>
-                                        <td class="px-6 py-4 text-right">
-                                            $<span id="netflixDisplay">18.87</span>
-                                            <input id="netflixInput" type="number" class="hidden w-28 text-right" value="18.87" step="0.01">
-                                        </td>
-                                        <td class="px-6 py-4 text-right">~€<span id="netflixEuroDisplay">18</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4 pl-12">Spotify</td>
-                                        <td class="px-6 py-4 text-right">
-                                            $<span id="spotifyDisplay">15.70</span>
-                                            <input id="spotifyInput" type="number" class="hidden w-28 text-right" value="15.70" step="0.01">
-                                        </td>
-                                        <td class="px-6 py-4 text-right">~€<span id="spotifyEuroDisplay">15</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4 pl-12">Hulu/Disney+</td>
-                                        <td class="px-6 py-4 text-right">
-                                            $<span id="huluDisneyDisplay">25.71</span>
-                                            <input id="huluDisneyInput" type="number" class="hidden w-28 text-right" value="25.71" step="0.01">
-                                        </td>
-                                        <td class="px-6 py-4 text-right">~€<span id="huluDisneyEuroDisplay">24</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4 pl-12">Healthcare</td>
-                                        <td class="px-6 py-4 text-right">
-                                            $<span id="healthcareDisplay">129.45</span>
-                                            <input id="healthcareInput" type="number" class="hidden w-28 text-right" value="129.45" step="0.01">
-                                        </td>
-                                        <td class="px-6 py-4 text-right">~€<span id="healthcareEuroDisplay">120</span>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4 pl-12">Public Transportation</td>
-                                        <td class="px-6 py-4 text-right">
-                                            $<span id="transportationDisplay">129.45</span>
-                                            <input id="transportationInput" type="number" class="hidden w-28 text-right" value="129.45" step="0.01">
-                                        </td>
-                                        <td class="px-6 py-4 text-right">~€<span id="transportationEuroDisplay">120</span>
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
@@ -645,6 +660,15 @@
                                             <input id="miscSpendingInput" type="number" class="hidden w-28 text-right" value="172.60" step="0.01">
                                         </td>
                                         <td class="px-6 py-4 text-right">~€<span id="miscSpendingEuroDisplay">160</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4 pl-12">Michelangelo's School</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="michelangelosSchoolDisplay">700.00</span>
+                                            <input id="michelangelosSchoolInput" type="number" class="hidden w-28 text-right" value="700.00" step="0.01">
+                                        </td>
+                                        <td class="px-6 py-4 text-right">~€<span id="michelangelosSchoolEuroDisplay">651</span>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -685,15 +709,54 @@
                         <p class="text-xl text-gray-600">A look at some of the international schools available</p>
                     </div>
 
+                    <div class="bg-gray-100 p-6 rounded-2xl shadow-inner mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Cost Analysis of Tuition</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            A detailed review of the tuition costs for three Montessori schools in the Valencia region reveals a distinct financial profile for each institution. While all three are private, their fee structures vary significantly, encompassing different payment models, supplementary service costs, and one-time fees. This analysis provides a breakdown of each school's costs for the first year of enrollment.
+                        </p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">School Name</th>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">One-time First-Year Fees</th>
+                                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Annual Tuition Cost</th>
+                                        <th class="px-6 py-4 text-right text-sm font-semibold text-gray-900">Estimated Total First-Year Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Second Body Montessori (Elementary)</td>
+                                        <td class="px-6 py-4">€840</td>
+                                        <td class="px-6 py-4">€9,420 (785 x 12)</td>
+                                        <td class="px-6 py-4 text-right">€10,260</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Mammolina Montessori (Children's House)</td>
+                                        <td class="px-6 py-4">€620</td>
+                                        <td class="px-6 py-4">€5,950 (595 x 10)</td>
+                                        <td class="px-6 py-4 text-right">€6,570</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Valencia Montessori (Elementary)</td>
+                                        <td class="px-6 py-4">€1,859</td>
+                                        <td class="px-6 py-4">€9,624 (802 x 12)</td>
+                                        <td class="px-6 py-4 text-right">€11,483</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
                     <div class="grid lg:grid-cols-3 gap-6 mb-8">
                         <!-- School 1 -->
                         <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-2xl border border-blue-200">
                             <h3 class="text-2xl font-bold text-gray-800 mb-2">Second Body Montessori School</h3>
                             <p class="text-gray-600 mb-4">
-                                **Tuition (Approx.):** €700 - €1,300/month
+                                **Tuition (Approx.):** €785/month (Elementary)
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                A Montessori school located in central Valencia. Its central location makes it ideal for families who want to live in the city center.
+                                A private educational institution situated in the heart of central Valencia. The school's philosophy is rooted in authentic Montessori practices, offering a bilingual curriculum. A key feature is its on-site kitchen, which prepares home-cooked and nutritious meals daily.
                             </p>
                             <div class="mt-4">
                                 <h4 class="font-semibold text-gray-800">Nearest Towns:</h4>
@@ -709,10 +772,10 @@
                         <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-100 p-6 rounded-2xl border border-purple-200">
                             <h3 class="text-2xl font-bold text-gray-800 mb-2">Mammolina Montessori</h3>
                             <p class="text-gray-600 mb-4">
-                                **Tuition (Approx.):** €700 - €1,300/month
+                                **Tuition (Approx.):** €650/month (Primary)
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                Located in the Paterna area, about 20 minutes from the city center. It offers a Montessori curriculum in a suburban setting.
+                                Located in the Paterna area, approximately 20 minutes from the city center. It is a "small, private, family-friendly international school" with a nurturing, multilingual environment and a large outdoor garden.
                             </p>
                             <div class="mt-4">
                                 <h4 class="font-semibold text-gray-800">Nearest Towns:</h4>
@@ -726,12 +789,12 @@
                         
                         <!-- School 3 -->
                         <div class="card-hover bg-gradient-to-br from-yellow-50 to-orange-100 p-6 rounded-2xl border border-yellow-200">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Montessori School Tavernes Blanques</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Valencia Montessori School</h3>
                             <p class="text-gray-600 mb-4">
-                                **Tuition (Approx.):** €700 - €1,300/month
+                                **Tuition (Approx.):** €802/month (Elementary)
                             </p>
                             <p class="text-gray-700 leading-relaxed">
-                                Situated just outside Valencia in Tavernes Blanques, providing a peaceful environment while still being close to the city.
+                                This UNESCO- and American-affiliated school is relocating to Tavernes Blanques in July 2025. It has a strong emphasis on the "Slow Food" movement, with a dedicated cook who works with local farmers to prepare nutritious meals.
                             </p>
                             <div class="mt-4">
                                 <h4 class="font-semibold text-gray-800">Nearest Towns:</h4>
@@ -746,7 +809,16 @@
 
                     <div class="bg-gray-100 p-6 rounded-2xl shadow-inner">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Map of Schools</h3>
-                        <div id="map" class="w-full h-96 rounded-xl overflow-hidden shadow-lg"></div>
+                        <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
+                            <iframe 
+                                src="https://www.google.com/maps/d/embed?mid=1fFvJ4tN51hG651g9wHqM2l8z0uB8w&ehpvt=1&z=12&ll=39.5028,-0.3801" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
 
@@ -805,11 +877,18 @@
                                             <input id="oaklandTaxesInput" type="number" class="hidden w-28 text-right" value="710.00" step="0.01">
                                         </td>
                                     </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">Water</td>
+                                        <td class="px-6 py-4 text-right">
+                                            $<span id="oaklandWaterDisplay">84.00</span>
+                                            <input id="oaklandWaterInput" type="number" class="hidden w-28 text-right" value="84.00" step="0.01">
+                                        </td>
+                                    </tr>
                                     <tr class="bg-gray-100 font-semibold">
                                         <td class="px-6 py-4">Total Oakland Expenses</td>
                                         <td class="px-6 py-4 text-right">
-                                            $<span id="oaklandTotalExpensesDisplay">1,220.00</span>
-                                            <input id="oaklandTotalExpensesInput" type="number" class="hidden w-28 text-right" value="1220.00" readonly>
+                                            $<span id="oaklandTotalExpensesDisplay">1,304.00</span>
+                                            <input id="oaklandTotalExpensesInput" type="number" class="hidden w-28 text-right" value="1304.00" readonly>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -945,58 +1024,23 @@
     </div>
 
     <script>
-        // Google Maps API script
-        function initMap() {
-            const valencia = { lat: 39.4699, lng: -0.3774 };
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 12,
-                center: valencia,
-                mapTypeControl: false,
-                streetViewControl: false,
-            });
-
-            const schools = [
-                {
-                    name: "Second Body Montessori School",
-                    location: { lat: 39.4735, lng: -0.3768 },
-                    address: "Carrer de les Soreries, 2, Ciutat Vella, 46001 València, Valencia, Spain",
-                    info: "Located in central Valencia, ideal for city living."
-                },
-                {
-                    name: "Mammolina Montessori",
-                    location: { lat: 39.5165, lng: -0.4284 },
-                    address: "Carrer de la Senyera, 29, 46115 Alfara del Patriarca, Valencia, Spain",
-                    info: "Located in the Paterna area, a 20-minute drive from the city center."
-                },
-                {
-                    name: "Montessori School Tavernes Blanques",
-                    location: { lat: 39.5028, lng: -0.3601 },
-                    address: "Carrer de Sant Joan, 12, 46001 Tavernes Blanques, Valencia, Spain",
-                    info: "Located just outside Valencia, in a quieter, suburban environment."
-                }
-            ];
-
-            const infoWindow = new google.maps.InfoWindow();
-
-            schools.forEach(school => {
-                const marker = new google.maps.Marker({
-                    position: school.location,
-                    map: map,
-                    title: school.name,
-                });
-
-                marker.addListener("click", () => {
-                    infoWindow.close();
-                    infoWindow.setContent(`
-                        <h3 style="font-weight: bold; margin-bottom: 5px;">${school.name}</h3>
-                        <p>${school.address}</p>
-                        <p>${school.info}</p>
-                    `);
-                    infoWindow.open(map, marker);
-                });
-            });
+        // Use an alternate map solution that doesn't require an API key
+        // This function will run when the Schools tab is opened
+        function openMap() {
+            const mapContainer = document.getElementById('map');
+            mapContainer.innerHTML = `
+                <iframe
+                    src="https://www.google.com/maps/d/embed?mid=1fFvJ4tN51hG651g9wHqM2l8z0uB8w&ehpvt=1&z=12&ll=39.5028,-0.3801"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            `;
         }
-        
+
+        // Handle tab switching and map loading
         function openTab(evt, tabName) {
             var i, tabContent, tabButtons;
             
@@ -1016,9 +1060,9 @@
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
 
-            // Load the map if the Schools tab is active
-            if (tabName === 'Schools' && typeof google !== 'undefined') {
-                initMap();
+            // Load the map when the Schools tab is active
+            if (tabName === 'Schools') {
+                openMap();
             }
         }
         
@@ -1050,24 +1094,27 @@
                 const investmentsIncome = parseFloat(document.getElementById('investmentsIncomeInput').value);
                 const rentUSD = parseFloat(document.getElementById('rentInput').value);
                 const oaklandCosts = parseFloat(document.getElementById('oaklandCostsInput').value);
-                const mobileUSD = parseFloat(document.getElementById('mobileInput').value);
                 const groceriesUSD = parseFloat(document.getElementById('groceriesInput').value);
+                const mobileUSD = parseFloat(document.getElementById('mobileInput').value);
+                const internetUSD = parseFloat(document.getElementById('internetInput').value);
+                const entertainmentUSD = parseFloat(document.getElementById('entertainmentInput').value);
+                const valenciaWaterUSD = parseFloat(document.getElementById('valenciaWaterInput').value);
+                const communityFeesUSD = parseFloat(document.getElementById('communityFeesInput').value);
+                const gymUSD = parseFloat(document.getElementById('gymInput').value);
+                const homeInsuranceUSD = parseFloat(document.getElementById('homeInsuranceInput').value);
                 const diningOutUSD = parseFloat(document.getElementById('diningOutInput').value);
-                const netflixUSD = parseFloat(document.getElementById('netflixInput').value);
-                const spotifyUSD = parseFloat(document.getElementById('spotifyInput').value);
-                const huluDisneyUSD = parseFloat(document.getElementById('huluDisneyInput').value);
-                const healthcareUSD = parseFloat(document.getElementById('healthcareInput').value);
-                const transportationUSD = parseFloat(document.getElementById('transportationInput').value);
                 const clothingUSD = parseFloat(document.getElementById('clothingInput').value);
                 const miscSpendingUSD = parseFloat(document.getElementById('miscSpendingInput').value);
                 const rentDepositInput = parseFloat(document.getElementById('rentInput').value);
                 const agencyFeesInput = parseFloat(document.getElementById('rentInput').value);
                 const tieFeesInput = parseFloat(document.getElementById('tieFeesInput').value);
+                const michelangelosSchoolUSD = parseFloat(document.getElementById('michelangelosSchoolInput').value);
+
 
                 const totalIncome = vaCpIncome + emilyPayIncome + investmentsIncome;
 
                 // Calculate new total expenses
-                const newMonthlyExpenses = rentUSD + oaklandCosts + mobileUSD + groceriesUSD + diningOutUSD + netflixUSD + spotifyUSD + huluDisneyUSD + healthcareUSD + transportationUSD + clothingUSD + miscSpendingUSD;
+                const newMonthlyExpenses = rentUSD + oaklandCosts + groceriesUSD + mobileUSD + internetUSD + entertainmentUSD + valenciaWaterUSD + communityFeesUSD + gymUSD + homeInsuranceUSD + diningOutUSD + clothingUSD + miscSpendingUSD + michelangelosSchoolUSD;
                 const newMonthlySurplus = totalIncome - newMonthlyExpenses;
 
                 // Update the display for income, expenses, and surplus
@@ -1091,16 +1138,18 @@
                 document.getElementById('expensesRowEuroDisplay').textContent = (newMonthlyExpenses * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('rentEuroDisplay').textContent = (rentUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('oaklandCostsEuroDisplay').textContent = (oaklandCosts * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('mobileEuroDisplay').textContent = (mobileUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('groceriesEuroDisplay').textContent = (groceriesUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('mobileEuroDisplay').textContent = (mobileUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('internetEuroDisplay').textContent = (internetUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('entertainmentEuroDisplay').textContent = (entertainmentUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('valenciaWaterEuroDisplay').textContent = (valenciaWaterUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('communityFeesEuroDisplay').textContent = (communityFeesUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('gymEuroDisplay').textContent = (gymUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('homeInsuranceEuroDisplay').textContent = (homeInsuranceUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('diningOutEuroDisplay').textContent = (diningOutUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('netflixEuroDisplay').textContent = (netflixUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('spotifyEuroDisplay').textContent = (spotifyUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('huluDisneyEuroDisplay').textContent = (huluDisneyUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('healthcareEuroDisplay').textContent = (healthcareUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('transportationEuroDisplay').textContent = (transportationUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('clothingEuroDisplay').textContent = (clothingUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('miscSpendingEuroDisplay').textContent = (miscSpendingUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('michelangelosSchoolEuroDisplay').textContent = (michelangelosSchoolUSD * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('rentDepositEuroDisplay').textContent = (rentDepositInput * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('agencyFeesEuroDisplay').textContent = (agencyFeesInput * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('tieFeesEuroDisplay').textContent = (tieFeesInput * euroExchangeRate).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -1118,7 +1167,8 @@
                 const oaklandCarInsurance = parseFloat(document.getElementById('oaklandCarInsuranceInput').value) || 0;
                 const oaklandElectricity = parseFloat(document.getElementById('oaklandElectricityInput').value) || 0;
                 const oaklandTaxes = parseFloat(document.getElementById('oaklandTaxesInput').value) || 0;
-                const totalOaklandExpenses = oaklandHOA + oaklandSecurity + oaklandCarInsurance + oaklandElectricity + oaklandTaxes;
+                const oaklandWater = parseFloat(document.getElementById('oaklandWaterInput').value) || 0;
+                const totalOaklandExpenses = oaklandHOA + oaklandSecurity + oaklandCarInsurance + oaklandElectricity + oaklandTaxes + oaklandWater;
 
                 document.getElementById('oaklandTotalExpensesDisplay').textContent = totalOaklandExpenses.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('oaklandTotalExpensesInput').value = totalOaklandExpenses.toFixed(2);
@@ -1144,7 +1194,8 @@
                 document.getElementById('oaklandCarInsuranceDisplay').textContent = parseFloat(document.getElementById('oaklandCarInsuranceInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('oaklandElectricityDisplay').textContent = parseFloat(document.getElementById('oaklandElectricityInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('oaklandTaxesDisplay').textContent = parseFloat(document.getElementById('oaklandTaxesInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                
+                document.getElementById('oaklandWaterDisplay').textContent = parseFloat(document.getElementById('oaklandWaterInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
                 updateOaklandTotals();
             });
 
@@ -1178,16 +1229,18 @@
                 document.getElementById('investmentsIncomeDisplay').textContent = parseFloat(document.getElementById('investmentsIncomeInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('rentDisplay').textContent = parseFloat(document.getElementById('rentInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('oaklandCostsDisplay').textContent = parseFloat(document.getElementById('oaklandCostsInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('mobileDisplay').textContent = parseFloat(document.getElementById('mobileInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('groceriesDisplay').textContent = parseFloat(document.getElementById('groceriesInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('mobileDisplay').textContent = parseFloat(document.getElementById('mobileInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('internetDisplay').textContent = parseFloat(document.getElementById('internetInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('entertainmentDisplay').textContent = parseFloat(document.getElementById('entertainmentInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('valenciaWaterDisplay').textContent = parseFloat(document.getElementById('valenciaWaterInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('communityFeesDisplay').textContent = parseFloat(document.getElementById('communityFeesInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('gymDisplay').textContent = parseFloat(document.getElementById('gymInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('homeInsuranceDisplay').textContent = parseFloat(document.getElementById('homeInsuranceInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('diningOutDisplay').textContent = parseFloat(document.getElementById('diningOutInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('netflixDisplay').textContent = parseFloat(document.getElementById('netflixInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('spotifyDisplay').textContent = parseFloat(document.getElementById('spotifyInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('huluDisneyDisplay').textContent = parseFloat(document.getElementById('huluDisneyInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('healthcareDisplay').textContent = parseFloat(document.getElementById('healthcareInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                document.getElementById('transportationDisplay').textContent = parseFloat(document.getElementById('transportationInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('clothingDisplay').textContent = parseFloat(document.getElementById('clothingInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('miscSpendingDisplay').textContent = parseFloat(document.getElementById('miscSpendingInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('michelangelosSchoolDisplay').textContent = parseFloat(document.getElementById('michelangelosSchoolInput').value).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 document.getElementById('rentDepositInput').value = parseFloat(document.getElementById('rentInput').value).toFixed(2);
                 document.getElementById('agencyFeesInput').value = parseFloat(document.getElementById('rentInput').value).toFixed(2);
 
@@ -1206,11 +1259,6 @@
             updateOaklandTotals();
         });
     </script>
-    <!-- 
-       The Google Maps API key is missing. The map will not load until you add a valid API key.
-        You can get one here: https://developers.google.com/maps/documentation/javascript/get-api-key
-        Once you have your key, replace "YOUR_API_KEY" in the line below.
-    -->
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxCCOQjjsn-L5diDAqegPf6FEi3mwAWYA&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxCCOQjjsn-L5diDAqegPf6FEi3mwAWYA&callback=initMap"></script>
 </body>
 </html>
